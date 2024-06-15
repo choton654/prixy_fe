@@ -49,6 +49,7 @@ function RequestList() {
                                                 <th>Name</th>
                                                 <th>Amount</th>
                                                 <th>Date</th>
+                                                <th>Acion</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -57,6 +58,10 @@ function RequestList() {
                                                     <td>{req?.agent[0].first_name} {req?.agent[0].last_name}</td>
                                                     <td>{req.amount}</td>
                                                     <td>{req.createdAt && new Date(req.createdAt).toLocaleString()}</td> 
+                                                    <td>
+                                                        <a href={`/requests/detail/${req._id}`} ><i class="fa fa-eye " aria-hidden="true"></i></a>
+                                                      
+                                                    </td> 
                                                 </tr>
                                             ))}
                                         </tbody>

@@ -2,7 +2,7 @@
 const DEV_BASE_URL = 'http://3.22.121.28/dev/api/admin/';
 const LOCAL_BASE_URL = 'http://localhost:9013/api/admin/';
 
-//export const BASE_URL = LOCAL_BASE_URL;
+// export const BASE_URL = LOCAL_BASE_URL;
 export const BASE_URL = DEV_BASE_URL;
 export const LoginAPI = `${BASE_URL}login`;
 

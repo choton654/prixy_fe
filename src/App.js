@@ -23,6 +23,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import DetailRequest from './pages/requests/Detail';
 
 const queryClient = new QueryClient()
 
@@ -51,6 +52,7 @@ function App() {
               <Route path="/agents/detail/:id" element={<AgentDetail />} />
 
               <Route path="/requests" element={<RequestList />} />
+              <Route path="/requests/detail/:id" element={<DetailRequest />} />
               <Route path="/gobal-setting" element={<GobalSettingList />} />
               <Route path="/gobal-setting/add/" element={<AddGlobalSettings />} />
               <Route path="/gobal-setting/edit/:id" element={<AddGlobalSettings />} />
