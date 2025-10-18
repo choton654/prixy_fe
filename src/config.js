@@ -1,6 +1,6 @@
 // config.js
-const DEV_BASE_URL = 'http://3.22.121.28/dev/api/admin/';
-const LOCAL_BASE_URL = 'http://localhost:9013/api/admin/';
+const DEV_BASE_URL = 'https://prixy-be.onrender.com/api/admin/';
+// const DEV_BASE_URL = 'http://localhost:8000/api/admin/';
 
 // export const BASE_URL = LOCAL_BASE_URL;
 export const BASE_URL = DEV_BASE_URL;
