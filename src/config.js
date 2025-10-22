@@ -23,3 +23,6 @@ export const getAllGobalSetting = `${BASE_URL}gobal-settings/get-gobal-settings-
 export const addGobalSetting    = `${BASE_URL}gobal-settings/add-gobal-settings`;
 export const editGobalSetting   = `${BASE_URL}gobal-settings/edit-gobal-settings`;
 export const deleteGobalSetting   = `${BASE_URL}gobal-settings/delete-gobal-settings`;
+
+// prixy.admin@gmail.com
+// 123456

@@ -179,7 +179,7 @@ function AgentDetail() {
                                             <span className='spanclassTxt'>{ users.addressDetails?.zip ?? 'N/A'}</span>
                                         </div>
 
-                                        {users.kycFileNames && users.kycFileNames.length > 0 ? (
+                                        
                                             <div className="col-lg-4">
                                                 <label className="lableClass"> Kyc Verificatiom </label>
                                                 <br/>
@@ -188,7 +188,7 @@ function AgentDetail() {
                                                     <span className="slider round"></span>
                                                 </label> */}
                                             
-                                                {users.is_kyc_approved === 0 ? (
+                                                {users?.is_kyc_approved !== 1 ? (
                                                     <div>
                                                         <a onClick={() => handleKycApprovalToggle(users._id, '1', '2')}>
                                                             <i className="fa fa-times-circle disblecheck fa-lg"
@@ -210,11 +210,6 @@ function AgentDetail() {
                                                 }</span>
                                                 
                                             </div>
-                                        ) : (
-                                            <div>
-                                                <span className='spanclassTxt'></span>
-                                            </div>
-                                        )}
                                         
                                         <div className="col-lg-4">
                                             <label className="lableClass"> Block / Unblock </label>
