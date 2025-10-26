@@ -20,7 +20,7 @@ export default class Dashboard extends Component {
                                     <div className="small-box bg-orange">
                                         <div className="inner">
                                             <p>Total Users</p>
-                                            <h3>10</h3>
+                                            <h3>_</h3>
                                         </div>
                                     </div>        
                                 </a>
@@ -30,7 +30,7 @@ export default class Dashboard extends Component {
                                     <div className="small-box bg-blue">
                                         <div className="inner">
                                             <p>Total WithDraw</p>
-                                            <h3>10</h3>
+                                            <h3>_</h3>
                                         </div>
                                     </div>        
                                 </a>
@@ -40,7 +40,7 @@ export default class Dashboard extends Component {
                                     <div className="small-box bg-purple">
                                         <div className="inner">
                                             <p>Total Amount</p>
-                                            <h3>10</h3>
+                                            <h3>_</h3>
                                         </div>
                                     </div>        
                                 </a>
@@ -50,7 +50,7 @@ export default class Dashboard extends Component {
                                     <div className="small-box bg-green">
                                         <div className="inner">
                                             <p>Total Balance</p>
-                                            <h3>10</h3>
+                                            <h3>_</h3>
                                         </div>
                                     </div>        
                                 </a>

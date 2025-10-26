@@ -10,7 +10,8 @@ const Header = () => {
         localStorage.setItem('isAuthenticated','false');
         toast.success('Logout successful');
         //  Redirect to login
-        navigate('/login');
+        // navigate('/login');
+        window.location.href = '/login';
     };
 
     return (
@@ -25,7 +26,7 @@ const Header = () => {
                 <li className="nav-item profile-item dropdown">
                     <a className="nav-link" data-toggle="dropdown" href="#">
                     <span className="profile-img">
-                        <img src="/admin/dist/img/profile.png" alt=""/>
+                        <img src="/prixy_img.png" alt=""/>
                     </span>
                     <span className="profile-name"></span>
                     <i className="fas fa-angle-down"></i>

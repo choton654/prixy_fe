@@ -29,9 +29,14 @@ const Login = () => {
         setLoading(true);
 
         // Check if email and password are not empty
-        if (!email.trim() || !password.trim()) {
+        if (!email.trim()) {
             // If either field is empty, set an error message and return early
-            toast.error('Please enter both email and password');
+            toast.error('Please enter email');
+            return;
+        }
+        if (!password.trim()) {
+            // If either field is empty, set an error message and return early
+            toast.error('Please enter password');
             return;
         }
 
@@ -75,6 +80,9 @@ const Login = () => {
                 <div className='col-lg-4'>
                     <div className='login-page'>
                         <div className="login-box">
+                            <div style={{display:'flex', justifyContent:'center', marginBottom:'100px'}}>
+                                <img src="/prixy_logo.png" alt="Prixy Logo" className="login-logo" style={{height:'100px'}}/>
+                            </div>
                             <div className="login-title-box">
                                 <h4 className="login-title">Welcome to Prixy    </h4>
                             </div>
@@ -115,9 +123,9 @@ const Login = () => {
                                         <span className="custom-checked">
                                             <img src="{{URL('public/admin/dist/img/checked.svg')}}" alt="" />
                                         </span>
-                                        <label htmlFor="remember">
+                                        {/* <label htmlFor="remember">
                                             Remember Me
-                                        </label>
+                                        </label> */}
                                         </div>
                                     </div>
                                 </div>
@@ -125,11 +133,11 @@ const Login = () => {
                                     <div className="col-lg-4">
                                         <button type="submit" className="btn btn-primary">Submit</button>
                                     </div>
-                                    <div className="col-lg-8">
+                                    {/* <div className="col-lg-8">
                                         <p className="forgot-link">
                                         <a href="">Forgot Password?</a>
                                         </p>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </form>
                         </div>       

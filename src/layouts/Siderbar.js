@@ -13,7 +13,7 @@ class Siderbar extends Component {
                     <a href="index3.html" className="brand-link">
                     <img src="{{URL('admin/dist/img/logo-dashboard.svg')}}" alt=""/>
                     </a>
-                    <div className="main-navigation">MAIN NAVIGATION</div>
+                    {/* <div className="main-navigation">MAIN NAVIGATION</div> */}
                   
                     <div className="sidebar">
                         <nav className="mt-2">
