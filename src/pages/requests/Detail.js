@@ -122,7 +122,7 @@ function DetailRequest() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {data[0]?.accept_decline_status === '2' ? <div className="col-lg-6">
+                                        {data[0]?.accept_decline_status === '1' ? <div className="col-lg-6">
                                             <label className="lableClass">Money Accept/Reject  </label>
                                             <br />
                                             <div>
