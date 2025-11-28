@@ -126,11 +126,11 @@ function DetailRequest() {
                                             <label className="lableClass">Money Accept/Reject  </label>
                                             <br />
                                             <div>
-                                                <Button onClick={() => { handleAorR('0') }} >
+                                                <Button onClick={() => { handleAorR('3') }} >
                                                     <i className="fa fa-times-circle disblecheck fa-lg"
                                                         style={{ color: 'red', fontSize: '25px', marginTop: '10px' }}></i>
                                                 </Button>
-                                                <Button onClick={() => { handleAorR('1') }}>
+                                                <Button onClick={() => { handleAorR('2') }}>
                                                     <i className="fa fa-check-circle enablecheck fa-lg"
                                                         style={{ color: 'green', fontSize: '25px', marginTop: '10px' }}></i>
                                                 </Button>
