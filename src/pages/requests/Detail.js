@@ -138,7 +138,7 @@ function DetailRequest() {
                                         </div> : <div className="col-lg-4">
                                             <label className="lableClass">Money request type  </label>
                                             <br />
-                                            <span className='spanclassTxt'>{data[0]?.accept_decline_status === '1' ? 'Approved' : 'Not approved'}</span>
+                                            <span className='spanclassTxt'>{data[0]?.accept_decline_status === '2' ? 'Approved' : data[0]?.accept_decline_status === '3' ? 'Not approved' : 'Pending'}</span>
                                         </div>}
 
                                     </div>
