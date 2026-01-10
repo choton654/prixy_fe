@@ -47,6 +47,13 @@ class Siderbar extends Component {
                                     
                                 </li>
                                 <li className="nav-item">
+                                    <Link to="/fundraisers" className={`nav-link ${currentPath.startsWith('/fundraisers') ? 'active' : ''}`}>
+                                        <i className="nav-icon fas fa-users"></i>
+                                        <p>Fundraisers</p>
+                                    </Link>
+                                    
+                                </li>
+                                <li className="nav-item">
                                     <Link to="/gobal-setting" className={`nav-link ${currentPath.startsWith('/gobal-setting') ? 'active' : ''}`}>
                                         <i className="nav-icon fas fa-cog"></i>
                                         <p>Global Settings</p>

@@ -24,6 +24,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import DetailRequest from './pages/requests/Detail';
+import FundraiserList from './pages/fundraisers/List';
 
 const queryClient = new QueryClient()
 
@@ -52,6 +53,7 @@ function App() {
               <Route path="/agents/detail/:id" element={<AgentDetail />} />
 
               <Route path="/requests" element={<RequestList />} />
+              <Route path="/fundraisers" element={<FundraiserList />} />
               <Route path="/requests/detail/:id" element={<DetailRequest />} />
               <Route path="/gobal-setting" element={<GobalSettingList />} />
               <Route path="/gobal-setting/add/" element={<AddGlobalSettings />} />

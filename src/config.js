@@ -18,6 +18,7 @@ export const updateKycAndVerifiedStatusForAgent = `${BASE_URL}agents/update-kyc-
 
 // request
 export const getAllRequestAPI = `${BASE_URL}agents/get-requests`;
+export const getAllFundraisersAPI = `https://prixy-be.onrender.com/api/fundraiser/search`;
 //GobalSetting Api 
 export const getAllGobalSetting = `${BASE_URL}gobal-settings/get-gobal-settings-list`;
 export const addGobalSetting    = `${BASE_URL}gobal-settings/add-gobal-settings`;
