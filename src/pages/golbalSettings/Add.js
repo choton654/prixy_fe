@@ -13,6 +13,7 @@ const AddGlobalSettings = () => {
     const [userDesposistFeeRate, setUserDesposistFeeRate] = useState('');
     const [userTransferToAnotherUserRate, setUserTransferToAnotherUserRate] = useState('');
     const [userWithdrawalFeeRate, setUserWithdrawalFeeRate] = useState('');
+    const [fundraiserFee, setFundraiserFee] = useState('');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const params = useParams();
@@ -36,6 +37,7 @@ const AddGlobalSettings = () => {
             setAdminPreTransactionRate(response.data.data.admin_pre_transaction_rate);
             setUserWithdrawalFeeRate(response.data.data.user_withdrawal_fee_rate);
             setUserDesposistFeeRate(response.data.data.user_desposist_fee_rate);
+            setFundraiserFee(response.data.data.fundraiser_fee);
             setUserTransferToAnotherUserRate(response.data.data.user_transfer_to_another_user_rate);
             setLoading(false);
         } catch (error) {
@@ -68,6 +70,8 @@ const AddGlobalSettings = () => {
             setUserDesposistFeeRate(value);
         } else if (name === 'user_transfer_to_another_user_rate') {
             setUserTransferToAnotherUserRate(value);
+        }  else if (name === 'fundraiser_fee') {
+            setFundraiserFee(value);
         } 
     };
 
@@ -95,6 +99,7 @@ const AddGlobalSettings = () => {
                 "user_desposist_fee_rate" :  userDesposistFeeRate,
                 "user_transfer_to_another_user_rate" :  userTransferToAnotherUserRate,
                 "user_withdrawal_fee_rate" :  userWithdrawalFeeRate,
+                "fundraiser_fee" :  fundraiserFee,
                 "id":id
             };
             console.log(bodyParms);
@@ -252,6 +257,24 @@ const AddGlobalSettings = () => {
                                                     placeholder="Enter User Withdrawal Fee Rate" 
                                                     className="form-control"
                                                     value={userWithdrawalFeeRate}
+                                                    onChange={handleChange}
+                                                    style={{ marginTop: '5px' }}
+                                                />
+                                            </div>
+                                        </div>    
+                                    </div>  
+                                    <div className='row'> 
+                                        <div className='col-lg-4'>
+                                            <div className="form-group">
+                                                <label htmlFor="key" className="lableClass">User Withdrawal Fee Rate</label>
+                                              
+                                                <input 
+                                                    type="text" 
+                                                    name="fundraiser_fee" 
+                                                    id="fundraiser_fee" 
+                                                    placeholder="Enter Fundraiser Fee Rate" 
+                                                    className="form-control"
+                                                    value={fundraiserFee}
                                                     onChange={handleChange}
                                                     style={{ marginTop: '5px' }}
                                                 />

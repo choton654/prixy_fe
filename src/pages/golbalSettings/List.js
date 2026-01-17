@@ -159,6 +159,10 @@ class GobalSettingList extends Component {
                                                 <th>User Withdrawal Fee Rate</th>
                                                 <td>{user.user_withdrawal_fee_rate}</td>
                                             </tr>
+                                            <tr>
+                                                <th>Fundraiser Fee Rate</th>
+                                                <td>{user.fundraiser_fee}</td>
+                                            </tr>
                     
                                         </React.Fragment>
 
