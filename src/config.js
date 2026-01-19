@@ -27,3 +27,4 @@ export const deleteGobalSetting   = `${BASE_URL}gobal-settings/delete-gobal-sett
 
 // prixy.admin@gmail.com
 // 123456
+//
