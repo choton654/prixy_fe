@@ -20,21 +20,7 @@ function FundraiserList() {
     })
     // console.log('---req data---',token,data);
 
-        const handleApprove = async (id) => {
-        try {
-            const response = await axios.post(`https://prixy-be.onrender.com/api/fundraiser/approve`, 
-            { fundraiserId: id },
-            {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
-            refetch();
-            alert("Fundraiser approved successfully!");
-        } catch (error) {
-            console.error("Error approving fundraiser:", error);
-        }
-    }
+    
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -64,20 +50,22 @@ function FundraiserList() {
                                         <thead>
                                             <tr>
                                                 <th>Title</th>
-                                                <th>Purpose</th>
                                                 <th>Start Date</th>
                                                 <th>Target Amount</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {data && data.map((req, index) => (
                                                 <tr key={index}>
                                                     <td>{req.title}</td>
-                                                    <td>{req.purpose}</td>
                                                     <td>{req.start_date}</td> 
                                                     <td>{req.target_amount}</td> 
+                                                    <td>{req.isVerified ? 'Verified' : 'Not Verified'}</td>
                                                     <td>
-                                                        <button class="ml-2 btn btn-sm btn-primary" disabled={req.isVerified} onClick={ () => handleApprove(req.id)}>{req.isVerified ? 'Approved' : 'Approve'}</button>
+                                                        {/* <button class="ml-2 btn btn-sm btn-primary" disabled={req.isVerified} onClick={ () => handleApprove(req.id)}>{req.isVerified ? 'Approved' : 'Approve'}</button> */}
+                                                        <a href={`/fundraisers/detail/${req.id}`} ><i class="fa fa-eye " aria-hidden="true"></i></a>
                                                     </td> 
                                                 </tr>
                                             ))}
@@ -96,3 +84,5 @@ function FundraiserList() {
 }
 
 export default FundraiserList
+
+// Title, start date, target amount, status. eye icon

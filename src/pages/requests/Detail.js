@@ -55,7 +55,7 @@ function DetailRequest() {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-sm-6">
-                            <h1 className="m-0 text-dark">Manage Requets </h1>
+                            <h1 className="m-0 text-dark">Manage Agent Requets </h1>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ function DetailRequest() {
                                                 </Button>
                                             </div>
                                         </div> : <div className="col-lg-4">
-                                            <label className="lableClass">Money request type  </label>
+                                            <label className="lableClass">Status  </label>
                                             <br />
                                             <span className='spanclassTxt'>{data[0]?.accept_decline_status === '2' ? 'Approved' : data[0]?.accept_decline_status === '3' ? 'Not approved' : 'Pending'}</span>
                                         </div>}
