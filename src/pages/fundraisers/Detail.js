@@ -102,7 +102,7 @@ function FundraiserDetail() {
                                         <div className="col-lg-4">
                                             <label className="lableClass">Target amount  </label>
                                             <br/>
-                                            <span className='spanclassTxt'>{ users.target_amount || '0' }</span>
+                                            <span className='spanclassTxt'>{ users.target_amount || '0' } HTG</span>
                                         </div>
                                     </div>    
                                 </div>   

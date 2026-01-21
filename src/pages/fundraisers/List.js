@@ -1,12 +1,12 @@
 import axios from 'axios';
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import { getAllFundraisersAPI } from '../../config';
 import { useQuery } from '@tanstack/react-query';
 
 function FundraiserList() {
     const token = localStorage.getItem('token'); // Parse as boolean
 
-    const {data,isLoading, isError, refetch} = useQuery({
+    const { data, isLoading, isError, refetch } = useQuery({
         queryKey: 'getAllFundraisers',
         queryFn: async () => {
             const { data } = await axios.get(getAllFundraisersAPI, {
@@ -19,8 +19,14 @@ function FundraiserList() {
         enabled: token ? true : false
     })
     // console.log('---req data---',token,data);
-
-    
+    const [searchQuery, setSearchQuery] = useState('')
+    const finalData = useMemo(() => {
+        if (searchQuery) {
+            return data.filter(user => user.title.toLowerCase().includes(searchQuery.toLowerCase()));
+        } else {
+            return data
+        }
+    }, [data, searchQuery])
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -42,7 +48,18 @@ function FundraiserList() {
                         <div class="box-main">
                             <div class="box-main-top">
                                 <div class="box-main-title">Fundraisers List</div>
-                                
+                                <div class="box-main-top-right">
+                                    <div class="box-serch-field">
+                                        <input
+                                            type="text"
+                                            value={searchQuery}
+                                            onChange={(e) => setSearchQuery(e.target.value)}
+                                            placeholder="Search"
+                                            className='form-control'
+                                        />
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </div>
+                                </div>
                             </div>
                             <div class="box-main-table">
                                 <div class="table-responsive">
@@ -57,25 +74,25 @@ function FundraiserList() {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {data && data.map((req, index) => (
+                                            {finalData && finalData.map((req, index) => (
                                                 <tr key={index}>
                                                     <td>{req.title}</td>
-                                                    <td>{req.start_date}</td> 
-                                                    <td>{req.target_amount}</td> 
+                                                    <td>{req.start_date}</td>
+                                                    <td>{req.target_amount}</td>
                                                     <td>{req.isVerified ? 'Verified' : 'Not Verified'}</td>
                                                     <td>
                                                         {/* <button class="ml-2 btn btn-sm btn-primary" disabled={req.isVerified} onClick={ () => handleApprove(req.id)}>{req.isVerified ? 'Approved' : 'Approve'}</button> */}
                                                         <a href={`/fundraisers/detail/${req.id}`} ><i class="fa fa-eye " aria-hidden="true"></i></a>
-                                                    </td> 
+                                                    </td>
                                                 </tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
-                            </div> 
-                             
-                        </div>    
-                       
+                            </div>
+
+                        </div>
+
                     </div>
                 </section>
             </div>
