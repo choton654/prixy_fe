@@ -25,6 +25,8 @@ export const getAllFundraisersAPI = `https://prixy-be.onrender.com/api/fundraise
 export const getAllGobalSetting = `${BASE_URL}gobal-settings/get-gobal-settings-list`;
 export const addGobalSetting    = `${BASE_URL}gobal-settings/add-gobal-settings`;
 export const editGobalSetting   = `${BASE_URL}gobal-settings/edit-gobal-settings`;
+export const getFaq   = `${BASE_URL}gobal-settings/get-faq`;
+export const addEdit   = `${BASE_URL}gobal-settings/add-edit-faq`;
 export const deleteGobalSetting   = `${BASE_URL}gobal-settings/delete-gobal-settings`;
 
 // prixy.admin@gmail.com

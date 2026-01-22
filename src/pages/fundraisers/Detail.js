@@ -22,7 +22,7 @@ function FundraiserDetail() {
     
    
 
-   const handleApprove = async (id) => {
+   const handleApprove = async () => {
         try {
             const response = await axios.post(`${MAIN_BASE_URL}/api/fundraiser/approve`, 
             { fundraiserId: id },
