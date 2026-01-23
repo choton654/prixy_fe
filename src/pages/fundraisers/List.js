@@ -38,7 +38,7 @@ function FundraiserList() {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-sm-6">
-                                <h1 className="m-0 text-dark">Fundraisers</h1>
+                                <h1 className="m-0 text-dark">Manage Fundraisers</h1>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ function FundraiserList() {
                     <div className="container-fluid">
                         <div class="box-main">
                             <div class="box-main-top">
-                                <div class="box-main-title">Fundraisers List</div>
+                                <div class="box-main-title">Manage Fundraisers List</div>
                                 <div class="box-main-top-right">
                                     <div class="box-serch-field">
                                         <input
@@ -78,7 +78,7 @@ function FundraiserList() {
                                                 <tr key={index}>
                                                     <td>{req.title}</td>
                                                     <td>{req.start_date}</td>
-                                                    <td>{req.target_amount}</td>
+                                                    <td>{req.target_amount} HTG</td>
                                                     <td>{req.isVerified ? 'Verified' : 'Not Verified'}</td>
                                                     <td>
                                                         {/* <button class="ml-2 btn btn-sm btn-primary" disabled={req.isVerified} onClick={ () => handleApprove(req.id)}>{req.isVerified ? 'Approved' : 'Approve'}</button> */}

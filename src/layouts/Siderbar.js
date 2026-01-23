@@ -42,7 +42,7 @@ class Siderbar extends Component {
                                 <li className="nav-item">
                                     <Link to="/requests" className={`nav-link ${currentPath.startsWith('/requests') ? 'active' : ''}`}>
                                         <i className="nav-icon fas fa-users"></i>
-                                        <p>Requests</p>
+                                        <p>Agent Requests</p>
                                     </Link>
                                     
                                 </li>

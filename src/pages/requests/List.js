@@ -29,7 +29,7 @@ function RequestList() {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-sm-6">
-                                <h1 className="m-0 text-dark">Requests</h1>
+                                <h1 className="m-0 text-dark">Manage Request</h1>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ function RequestList() {
                     <div className="container-fluid">
                         <div class="box-main">
                             <div class="box-main-top">
-                                <div class="box-main-title">Request List</div>
+                                <div class="box-main-title">Manage Request List</div>
                                 
                             </div>
                             <div class="box-main-table">
