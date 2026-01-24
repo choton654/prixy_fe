@@ -56,8 +56,8 @@ function RequestList() {
                                             {data && data.map((req, index) => (
                                                 <tr key={index}>
                                                     <td>{req?.agent[0]?.first_name} {req?.agent[0]?.last_name}</td>
-                                                    <td>{req.amount}</td>
-                                                    <td>{req.createdAt && new Date(req.createdAt).toLocaleString()}</td> 
+                                                    <td>{req.amount} HTG</td>
+                                                    <td>{req.createdAt && new Date(req.createdAt).toLocaleDateString('en-CA').replace(/-/g, '/')}</td> 
                                                     <td>
                                                         <a href={`/requests/detail/${req._id}`} ><i class="fa fa-eye " aria-hidden="true"></i></a>
                                                       

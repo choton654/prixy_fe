@@ -103,7 +103,7 @@ function DetailRequest() {
                                         <div className="col-lg-4">
                                             <label className="lableClass">Date of requested  </label>
                                             <br />
-                                            <span className='spanclassTxt'>{new Date(data[0]?.createdAt).toLocaleDateString() || '0'}</span>
+                                            <span className='spanclassTxt'>{new Date(data[0]?.createdAt).toLocaleDateString('en-CA').replace(/-/g, '/') || '0'}</span>
                                         </div>
                                     </div>
                                 </div>

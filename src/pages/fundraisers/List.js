@@ -79,7 +79,7 @@ function FundraiserList() {
                                                     <td>{req.title}</td>
                                                     <td>{req.start_date}</td>
                                                     <td>{req.target_amount} HTG</td>
-                                                    <td>{req.isVerified ? 'Verified' : 'Not Verified'}</td>
+                                                    <td>{req.isVerified ? 'Approved' : 'Pending'}</td>
                                                     <td>
                                                         {/* <button class="ml-2 btn btn-sm btn-primary" disabled={req.isVerified} onClick={ () => handleApprove(req.id)}>{req.isVerified ? 'Approved' : 'Approve'}</button> */}
                                                         <a href={`/fundraisers/detail/${req.id}`} ><i class="fa fa-eye " aria-hidden="true"></i></a>
