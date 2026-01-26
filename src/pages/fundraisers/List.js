@@ -77,7 +77,7 @@ function FundraiserList() {
                                             {finalData && finalData.map((req, index) => (
                                                 <tr key={index}>
                                                     <td>{req.title}</td>
-                                                    <td>{req.start_date}</td>
+                                                    <td>{req.start_date.replace(/\//g, '-')}</td>
                                                     <td>{req.target_amount} HTG</td>
                                                     <td>{req.isVerified ? 'Approved' : 'Pending'}</td>
                                                     <td>

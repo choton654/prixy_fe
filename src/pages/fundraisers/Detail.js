@@ -104,6 +104,11 @@ function FundraiserDetail() {
                                             <br/>
                                             <span className='spanclassTxt'>{ users.target_amount || '0' } HTG</span>
                                         </div>
+                                        <div className="col-lg-4">
+                                            <label className="lableClass">Start Date  </label>
+                                            <br/>
+                                            <span className='spanclassTxt'>{ users?.start_date?.replace(/\//g, '-') ?? 'N/A'}</span>
+                                        </div>
                                     </div>    
                                 </div>   
                                 <div className="col-lg-12 lableClassColClass">
@@ -116,19 +121,8 @@ function FundraiserDetail() {
 
                                             ))}
                                         </div>
-                                        <div className="col-lg-4">
-                                            <label className="lableClass">Start Date  </label>
-                                            <br/>
-                                            <span className='spanclassTxt'>{ users.start_date ?? 'N/A'}</span>
-                                        </div>
-                                    </div>    
-                                </div>    
-                                <div className="col-lg-12 lableClassColClass">
-                                    <div className="row">   
-
-                                        
-                                            <div className="col-lg-4">
-                                                <label className="lableClass"> Fundraiser Verificatiom </label>
+                                              <div className="col-lg-4">
+                                                <label className="lableClass"> Status </label>
                                                 <br/>
                                              
                                             
@@ -157,10 +151,8 @@ function FundraiserDetail() {
                                                 }</span>
                                                 
                                             </div>
-                                        
-                                        
                                     </div>    
-                                </div> 
+                                </div>   
                                 <div className="col-lg-12 lableClassColClass">
                                     <div className="row">   
                                         <div className="col-lg-12">

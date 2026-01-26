@@ -26,7 +26,7 @@ const Header = () => {
                 <li className="nav-item profile-item dropdown">
                     <a className="nav-link" data-toggle="dropdown" href="#">
                     <span className="profile-img">
-                        <img src="/prixy_img.png" alt=""/>
+                        <img src="/Profile_Picture.png" alt=""/>
                     </span>
                     <span className="profile-name"></span>
                     <i className="fas fa-angle-down"></i>

@@ -11,7 +11,7 @@ class Siderbar extends Component {
             <div>
                 <aside className="main-sidebar sidebar-dark-primary elevation-4">
                     <a href="index3.html" className="brand-link">
-                    <img src="{{URL('admin/dist/img/logo-dashboard.svg')}}" alt=""/>
+                    <img src="/Admin_Menu.png" alt=""/>
                     </a>
                     {/* <div className="main-navigation">MAIN NAVIGATION</div> */}
                   

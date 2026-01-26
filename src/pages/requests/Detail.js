@@ -103,13 +103,13 @@ function DetailRequest() {
                                         <div className="col-lg-4">
                                             <label className="lableClass">Date of requested  </label>
                                             <br />
-                                            <span className='spanclassTxt'>{new Date(data[0]?.createdAt).toLocaleDateString('en-CA').replace(/-/g, '/') || '0'}</span>
+                                            <span className='spanclassTxt'>{new Date(data[0]?.createdAt).toLocaleDateString('en-CA').replace(/-/g, '-') || '0'}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 lableClassColClass">
                                     <div className="row">
-                                        <div className="col-lg-6">
+                                        <div className="col-lg-4">
                                             <label className="lableClass">Receipt  </label>
                                             <br />
                                             <div className="row" style={{ marginTop: '10px' }}>
@@ -122,7 +122,7 @@ function DetailRequest() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {data[0]?.accept_decline_status === '1' ? <div className="col-lg-6">
+                                        {data[0]?.accept_decline_status === '1' ? <div className="col-lg-4">
                                             <label className="lableClass">Money Accept/Reject  </label>
                                             <br />
                                             <div>
