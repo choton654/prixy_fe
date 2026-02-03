@@ -15,6 +15,11 @@ const AddGlobalSettings = () => {
     const [userTransferToAnotherUserRate, setUserTransferToAnotherUserRate] = useState('');
     const [userWithdrawalFeeRate, setUserWithdrawalFeeRate] = useState('');
     const [fundraiserFee, setFundraiserFee] = useState('');
+    const [home, setHome] = useState('');
+    const [zip, setZip] = useState('');
+    const [city, setCity] = useState('');
+    const [state, setState] = useState('');
+    const [street, setStreet] = useState('');
     const [faqs, setFaqs] = useState([]);
     const [fquestion, setFquestion] = useState('');
     const [fanswer, setFanswer] = useState('');
@@ -78,6 +83,16 @@ const AddGlobalSettings = () => {
             setUserTransferToAnotherUserRate(value);
         } else if (name === 'fundraiser_fee') {
             setFundraiserFee(value);
+        } else if (name === 'home') {
+            setHome(value);
+        } else if (name === 'city') {
+            setCity(value);
+        } else if (name === 'state') {
+            setState(value);
+        } else if (name === 'zip') {
+            setZip(value);
+        } else if (name === 'street') {
+            setStreet(value);
         }
     };
 
@@ -105,7 +120,14 @@ const AddGlobalSettings = () => {
                 "user_transfer_to_another_user_rate": userTransferToAnotherUserRate,
                 "user_withdrawal_fee_rate": userWithdrawalFeeRate,
                 "fundraiser_fee": fundraiserFee,
-                "id": id
+                "id": id,
+                "addressDetails":{
+                    "home": home,
+                    "street": street,
+                    "city": city,
+                    "state": state,
+                    "zip": zip
+                }
             };
             console.log(bodyParms);
             const response = await axios.post(addGobalSetting, bodyParms, {
@@ -409,6 +431,93 @@ const AddGlobalSettings = () => {
                                         </Button>
 
                                     </div>
+                                    <label htmlFor="key" className="lableClass">Office Address</label>
+
+                                    <div className='row'>
+                                        <div className='col-lg-4'>
+                                            <div className="form-group">
+                                                <label htmlFor="key" className="lableClass">Home</label>
+
+                                                <input
+                                                    type="text"
+                                                    name="home"
+                                                    id="home"
+                                                    placeholder="Enter Home"
+                                                    className="form-control"
+                                                    value={home}
+                                                    onChange={handleChange}
+                                                    style={{ marginTop: '5px' }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className='col-lg-4'>
+                                            <div className="form-group">
+                                                <label htmlFor="key" className="lableClass">Street</label>
+
+                                                <input
+                                                    type="text"
+                                                    name="street"
+                                                    id="street"
+                                                    placeholder="Enter Street"
+                                                    className="form-control"
+                                                    value={street}
+                                                    onChange={handleChange}
+                                                    style={{ marginTop: '5px' }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className='col-lg-4'>
+                                            <div className="form-group">
+                                                <label htmlFor="key" className="lableClass">City</label>
+
+                                                <input
+                                                    type="text"
+                                                    name="city"
+                                                    id="city"
+                                                    placeholder="Enter City"
+                                                    className="form-control"
+                                                    value={city}
+                                                    onChange={handleChange}
+                                                    style={{ marginTop: '5px' }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='row'>
+                                        <div className='col-lg-4'>
+                                            <div className="form-group">
+                                                <label htmlFor="key" className="lableClass">State</label>
+
+                                                <input
+                                                    type="text"
+                                                    name="state"
+                                                    id="state"
+                                                    placeholder="Enter State"
+                                                    className="form-control"
+                                                    value={state}
+                                                    onChange={handleChange}
+                                                    style={{ marginTop: '5px' }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className='col-lg-4'>
+                                            <div className="form-group">
+                                                <label htmlFor="key" className="lableClass">ZIP</label>
+
+                                                <input
+                                                    type="text"
+                                                    name="zip"
+                                                    id="zip"
+                                                    placeholder="Enter ZIP"
+                                                    className="form-control"
+                                                    value={zip}
+                                                    onChange={handleChange}
+                                                    style={{ marginTop: '5px' }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div className="row">
                                         <div className="col-lg-4">
                                             <button type="submit" className="btn btn-primary">Submit</button>

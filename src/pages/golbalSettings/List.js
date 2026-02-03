@@ -163,6 +163,26 @@ class GobalSettingList extends Component {
                                                 <th>Fundraiser Fee Rate</th>
                                                 <td>{user.fundraiser_fee}</td>
                                             </tr>
+                                            <tr>
+                                                <th>Home</th>
+                                                <td>{user.addressDetails?.home}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Street</th>
+                                                <td>{user.addressDetails?.street}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>City</th>
+                                                <td>{user.addressDetails?.city}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>State</th>
+                                                <td>{user.addressDetails?.state}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>ZIP</th>
+                                                <td>{user.addressDetails?.zip}</td>
+                                            </tr>
                     
                                         </React.Fragment>
 
